@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dan Leyster Malaque Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Landing Page -->
+  <section id="home" class="section active">
+    <div class="card">
+      <img src="malaque.jpg" alt="Dan Leyster Malaque" class="profile-pic" />
+      <h1>Dan Leyster Malaque</h1>
+      <h2>BSIT - 2D</h2>
+      <button onclick="showSection('menu')">more »</button>
+      <div class="contact">
+        <p>📧 danleystermalaque@gmail.com</p>
+        <p>📱 0954-473-6621</p>
+        <p>📸 @danleystermalaque</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="section">
+    <div class="card">
+      <div class="menu-grid">
+        <div class="menu-item">
+          <h3>SKILLS</h3>
+          <button onclick="showSection('skills')">more »</button>
+        </div>
+        <div class="menu-item">
+          <h3>PROJECT</h3>
+          <button onclick="showSection('project')">more »</button>
+        </div>
+        <div class="menu-item">
+          <h3>ABOUT ME</h3>
+          <button onclick="showSection('about')">more »</button>
+        </div>
+      </div>
+      <button onclick="showSection('home')">BACK »</button>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="card">
+      <h3>SKILLS</h3>
+      <div class="icons">
+        <div><img src="html.jpg" alt="HTML" /><p>HTML</p></div>
+        <div><img src="figma.jpg" alt="Figma" /><p>FIGMA</p></div>
+        <div><img src="css.jpg" alt="CSS" /><p>CSS</p></div>
+      </div>
+      <button onclick="showSection('menu')">HOME »</button>
+      <button onclick="showSection('menu')">BACK »</button>
+    </div>
+  </section>
+
+  <!-- Project Section -->
+  <section id="project" class="section">
+    <div class="card">
+      <h3>PROJECT</h3>
+      <img src="project.jpg" alt="Project" class="project-img" />
+      <p>
+        TrebEdit is a web-based editing tool used to create, organize, and format content for online publishing.
+        It’s great for making portfolios.
+      </p>
+      <button onclick="showSection('menu')">HOME »</button>
+      <button onclick="showSection('menu')">BACK »</button>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="section">
+    <div class="card">
+      <h3>ABOUT ME</h3>
+      <p>
+        An IT student who's really into tech and how things work behind the scenes.
+        Whether it’s coding, fixing network issues, or learning about cybersecurity,
+        I enjoy figuring things out and solving problems. I'm aiming for a future where
+        I can turn that curiosity into real-world tech solutions.
+      </p>
+      <button onclick="showSection('menu')">HOME »</button>
+      <button onclick="showSection('menu')">BACK »</button>
+    </div>
+  </section>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
